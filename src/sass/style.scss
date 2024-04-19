@@ -8,34 +8,51 @@
 @import './animations';
 
 body {
-    padding: 20px;
+	padding: 20px;
 
-    @include laptop {
-        padding: 30px;
-    }
+	@include laptop {
+		padding: 30px;
+	}
 }
 
 .button {
-    background-color: #3b71ca;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    padding: 15px 30px;
-    box-shadow: 5px 5px 5px #3b72ca4b;
-    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+	background-color: #3b71ca;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	padding: 15px 30px;
+	box-shadow: 5px 5px 5px #3b72ca4b;
+	transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
 
-    @include laptop {
-        font-size: 18px;
-        padding: 18px 32px;
-        border-radius: 8px;
-    }
+	@include laptop {
+		font-size: 18px;
+		padding: 18px 32px;
+		border-radius: 8px;
 
-    &:hover, &:focus {
+        // Due to the lack of interaction on hover on mobiles, it is better to use it only on devices that have a mouse, such as a laptop or desktop.
+
+		&:hover {
+			background-color: #194ca0;
+			box-shadow: 10px 10px 10px #3b72ca5e;
+			color: #fdfdfd;
+		}
+	}
+
+    &:focus {
         background-color: #194ca0;
         box-shadow: 10px 10px 10px #3b72ca5e;
         color: #fdfdfd;
     }
+
+    // Due to the lack of interaction on hover on mobiles, it is better to use it only on devices that have a mouse, such as a laptop or desktop.
+    // But just in case for review purpose below is code for every viewport to use hover
+
+	// &:hover, &:focus {
+	//     background-color: #194ca0;
+	//     box-shadow: 10px 10px 10px #3b72ca5e;
+	//     color: #fdfdfd;
+	// }
 }
