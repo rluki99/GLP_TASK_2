@@ -7,6 +7,35 @@
 @import './layouts';
 @import './animations';
 
+body {
+    padding: 20px;
+
+    @include laptop {
+        padding: 30px;
+    }
+}
+
 .button {
+    background-color: #3b71ca;
+    color: #fff;
     text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    box-shadow: 5px 5px 5px #3b72ca4b;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+
+    @include laptop {
+        font-size: 18px;
+        padding: 18px 32px;
+        border-radius: 8px;
+    }
+
+    &:hover, &:focus {
+        background-color: #194ca0;
+        box-shadow: 10px 10px 10px #3b72ca5e;
+        color: #fdfdfd;
+    }
 }
