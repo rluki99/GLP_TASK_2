@@ -1,11 +1,6 @@
 @import './base';
 @import './variables';
-@import './fonts';
-@import './icons';
 @import './mixins';
-@import './placeholders';
-@import './layouts';
-@import './animations';
 
 body {
 	padding: 20px;
@@ -16,15 +11,15 @@ body {
 }
 
 .button {
-	background-color: #3b71ca;
-	color: #fff;
+	background-color: $lightBlue;
+	color: $white;
 	text-transform: uppercase;
 	font-weight: bold;
 	cursor: pointer;
 	border: none;
 	border-radius: 5px;
 	padding: 15px 30px;
-	box-shadow: 5px 5px 5px #3b72ca4b;
+	box-shadow: 5px 5px 5px $buttonShadow;
 	transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
 
 	@include laptop {
@@ -32,27 +27,27 @@ body {
 		padding: 18px 32px;
 		border-radius: 8px;
 
-        // Due to the lack of interaction on hover on mobiles, it is better to use it only on devices that have a mouse, such as a laptop or desktop.
+		// Due to the lack of interaction on hover on mobiles, it is better to use it only on devices that have a mouse, such as a laptop or desktop.
 
 		&:hover {
-			background-color: #194ca0;
-			box-shadow: 10px 10px 10px #3b72ca5e;
-			color: #fdfdfd;
+			background-color: $darkBlue;
+			box-shadow: 10px 10px 10px $buttonDarkShadow;
+			color: $darkWhite;
 		}
 	}
 
-    &:focus {
-        background-color: #194ca0;
-        box-shadow: 10px 10px 10px #3b72ca5e;
-        color: #fdfdfd;
-    }
+	&:focus {
+		background-color: $darkBlue;
+		box-shadow: 10px 10px 10px $buttonDarkShadow;
+		color: $darkWhite;
+	}
 
-    // Due to the lack of interaction on hover on mobiles, it is better to use it only on devices that have a mouse, such as a laptop or desktop.
-    // But just in case for review purpose below is code for every viewport to use hover
+	// Due to the lack of interaction on hover on mobiles, it is better to use it only on devices that have a mouse, such as a laptop or desktop.
+	// But just in case for review purpose below is code for every viewport to use hover
 
 	// &:hover, &:focus {
-	//     background-color: #194ca0;
-	//     box-shadow: 10px 10px 10px #3b72ca5e;
-	//     color: #fdfdfd;
+	// background-color: $darkBlue;
+	// box-shadow: 10px 10px 10px $buttonDarkShadow;
+	// color: $darkWhite;
 	// }
 }
